@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -18,8 +21,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* env localhost */
+    "types": ["vite/finance-dashboard-client"],
+    "typeRoots": ["./node_modules/vite"]
   },
-  "include": ["src"],
+  "include": ["src", "theme.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
